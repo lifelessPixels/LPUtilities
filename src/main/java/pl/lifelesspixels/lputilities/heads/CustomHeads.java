@@ -24,7 +24,7 @@ public class CustomHeads {
 
         Field profileField = null;
         try {
-            profileField = skullMeta.getClass().getField("profile");
+            profileField = skullMeta.getClass().getDeclaredField("profile");
             profileField.setAccessible(true);
             profileField.set(skullMeta, profile);
         } catch (Exception e) {

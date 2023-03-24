@@ -1,4 +1,4 @@
-name: LPShops
-main: pl.lifelesspixels.lputlities.LPUtilities
+name: LPUtilities
+main: pl.lifelesspixels.lputilities.LPUtilities
 version: 0.1
 api-version: 1.19

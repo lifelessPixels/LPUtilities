@@ -2,3 +2,9 @@ name: LPUtilities
 main: pl.lifelesspixels.lputilities.LPUtilities
 version: 0.1
 api-version: 1.19
+commands:
+  giveskull:
+    description: Used to give skull with arbitrary Base64 data
+permissions:
+  lputilities.command.giveskull:
+    default: op

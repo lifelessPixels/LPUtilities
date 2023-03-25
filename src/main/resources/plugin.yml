@@ -2,6 +2,7 @@ name: LPUtilities
 main: pl.lifelesspixels.lputilities.LPUtilities
 version: 0.1
 api-version: 1.19
+depend: [LPChestGUI]
 commands:
   giveskull:
     description: Used to give skull with arbitrary Base64 data

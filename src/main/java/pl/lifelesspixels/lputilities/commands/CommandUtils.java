@@ -6,7 +6,8 @@ import org.bukkit.command.CommandSender;
 public class CommandUtils {
 
     public static void sendNoPermissionsMessage(CommandSender sender, String commandName) {
-        sender.sendMessage(ChatColor.RED + "You have no permissions to run /" + commandName + " command");
+        sender.sendMessage(ChatColor.RED + "You have no permissions to run " + ChatColor.RESET +
+                "/" + commandName + ChatColor.RED + " command");
     }
 
     public static void sendUsage(CommandSender sender, String alias, String argumentsString) {
@@ -19,6 +20,11 @@ public class CommandUtils {
 
     public static void sendCannotParseInteger(CommandSender sender, String integerString) {
         sender.sendMessage(ChatColor.RED + "Integer " + ChatColor.RESET + integerString + ChatColor.RED + " is invalid");
+    }
+
+    public static void sendOnlyAsPlayer(CommandSender sender, String alias) {
+        sender.sendMessage(ChatColor.RED + "Command " + ChatColor.RESET + "/" + alias + ChatColor.RED +
+                " can only be run as a Player");
     }
 
 }

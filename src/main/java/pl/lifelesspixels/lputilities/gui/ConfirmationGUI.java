@@ -12,18 +12,17 @@ import pl.lifelesspixels.lputilities.heads.CustomHeads;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.Callable;
 
 public class ConfirmationGUI extends ChestGUI {
 
     private static final ItemStack QUESTION_MARK_HEAD = CustomHeads.createHeadFromBase64(
             "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM4ZWExZjUxZjI1M2ZmNTE0MmNhMTFhZTQ1MTkzYTRhZDhjM2FiNWU5YzZlZWM4YmE3YTRmY2I3YmFjNDAifX19");
 
-    private static final ItemStack TICK_HEAD = CustomHeads.createHeadFromBase64(
-            "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGE5OTM0MmUyYzczYTlmMzgyMjYyOGU3OTY0ODgyMzRmMjU4NDQ2ZjVhMmQ0ZDU5ZGRlNGFhODdkYjk4In19fQ==");
+    private static final ItemStack YES_HEAD = CustomHeads.createHeadFromBase64(
+            "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTNlOWY0ZGJhZGRlMGY3MjdjNTgwM2Q3NWQ4YmIzNzhmYjlmY2I0YjYwZDMzYmVjMTkwOTJhM2EyZTdiMDdhOSJ9fX0=");
 
     private static final ItemStack CROSS_HEAD = CustomHeads.createHeadFromBase64(
-            "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTZjNjBkYTQxNGJmMDM3MTU5YzhiZThkMDlhOGVjYjkxOWJmODlhMWEyMTUwMWI1YjJlYTc1OTYzOTE4YjdiIn19fQ==");
+            "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjA2MmQ4ZDcyZjU4OTFjNzFmYWIzMGQ1MmUwNDgxNzk1YjNkMmQzZDJlZDJmOGI5YjUxN2Q3ZDI4MjFlMzVkNiJ9fX0=");
 
     private Runnable cancelCallback;
 
@@ -65,7 +64,7 @@ public class ConfirmationGUI extends ChestGUI {
     }
 
     private ItemStack createConfirmItem() {
-        ItemStack confirmItem = TICK_HEAD.clone();
+        ItemStack confirmItem = YES_HEAD.clone();
         ItemMeta meta = Objects.requireNonNull(confirmItem.getItemMeta());
         meta.setDisplayName(ChatColor.GREEN + "Confirm");
         confirmItem.setItemMeta(meta);
